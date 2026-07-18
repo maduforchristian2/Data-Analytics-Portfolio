@@ -1,0 +1,10 @@
+select count(*) from inventory;
+select product, current_stock from inventory;
+select sum(current_stock) from inventory;
+select avg(unit_cost)from inventory;
+select product, current_stock from inventory where current_stock >50;
+select product, unit_cost from inventory order by unit_cost desc;
+select product, current_stock * unit_cost as inventory_value from inventory;
+select warehouse, sum(current_stock) from inventory group by warehouse;
+select max(unit_cost) from inventory;
+select product, current_stock from inventory order by current_stock desc;

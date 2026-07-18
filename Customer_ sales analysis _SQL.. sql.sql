@@ -1,0 +1,15 @@
+select * from customer_sales_analysis;
+select  count(Customer_ID) from customer_sales_analysis ;
+select sum(total_sales) from customer_sales_analysis;
+select avg(unit_price) from customer_sales_analysis;
+select max(Unit_Price) from customer_sales_analysis order by Total_Sales desc limit 1;
+select min(total_sales) from customer_sales_analysis order by Total_Sales asc limit 1;
+select product, sum(total_sales) as total_revenue from customer_sales_analysis group by product order by total_revenue desc;
+select category, sum(total_sales) as total_revenue from customer_sales_analysis group by product order by total_revenue desc limit 1;
+select sum(total_sales) from customer_sales_analysis group by city;
+select customer_name from customer_sales_analysis  WHERE total_sales >100000;
+select* from customer_sales_analysis where payment_method='cash';
+select * from customer_sales_analysis where Payment_Method='transfer';
+select max(quantity) from customer_sales_analysis order by Total_Sales desc limit 1;
+select customer_name, total_sales from customer_sales_analysis order by total_sales desc limit 5;
+select month(sales_date) as month, sum(total_sales) as total_revenue from customer_sales_analysis group by month (sales_date);

@@ -1,0 +1,16 @@
+select * from hr_analytics;
+select * from employees where hr_analytics;
+select count(employee_id) from hr_analytics;
+select avg(salary) from hr_analytics;
+select max(salary) from hr_analytics;
+select min(salary)from hr_analytics;
+select * FROM hr_analytics WHERE DEPARTMENT ='IT';
+select * FROM hr_analytics WHERE SALARY >500000;
+select count(*) FROM hr_analytics group by CITY;
+select AVG(SALARY) FROM hr_analytics group by Department;
+select MAX(SALARY) FROM hr_analytics group by Department;
+select * FROM hr_analytics WHERE Gender ='MALE';
+select * FROM hr_analytics WHERE Gender ='FEMALE';
+select AVG(experience_years) from hr_analytics;
+select employee_id, salary from hr_analytics order by salary desc limit 5;
+select* from hr_analytics where year(Hire_Date) ='2024';
