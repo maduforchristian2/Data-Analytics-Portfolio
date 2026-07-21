@@ -1,0 +1,10 @@
+USE PORTFOLIO;
+select* from customer_sales_analysis;
+select * FROM customer_sales_analysis WHERE CITY ='ABUJA';
+select * FROM customer_sales_analysis WHERE AGE ='22';
+select COUNT(*) FROM customer_sales_analysis where Customer_ID;
+select Category, AVG(TOTAL_SALES) FROM customer_sales_analysis  group by Category;
+select MAX(TOTAL_SALES) from customer_sales_analysis;
+select MIN(TOTAL_SALES) FROM customer_sales_analysis;
+select CITY, SUM(TOTAL_SALES) FROM customer_sales_analysis group by CITY;
+select category, sum(total_sales)  from customer_sales_analysis group by Category;
